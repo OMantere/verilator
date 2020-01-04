@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-verilator -Wall --cc code.v --exe testbench.cpp
-make -C obj_dir -f Vcode.mk
-obj_dir/Vcode
+verilator -Wall --trace --cc uart_recv.v --exe uart_tb.cpp
+make -C obj_dir -fVuart_recv.mk
+obj_dir/Vuart_recv
+gtkwave trace.vcd
 
